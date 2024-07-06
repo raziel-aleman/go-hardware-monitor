@@ -101,19 +101,19 @@ func main() {
 		for {
 			systemSection, err := hardware.GetSystemSection()
 			if err != nil {
-				fmt.Println(err)
+				fmt.Println("systemSection", err)
 				continue
 			}
 
 			diskSection, err := hardware.GetDiskSection()
 			if err != nil {
-				fmt.Println(err)
+				fmt.Println("diskSection", err)
 				continue
 			}
 
 			cpuSection, err := hardware.GetCpuSection()
 			if err != nil {
-				fmt.Println(err)
+				fmt.Println("cpuSection", err)
 				continue
 			}
 
