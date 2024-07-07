@@ -117,22 +117,16 @@ func main() {
 				continue
 			}
 
-			// fmt.Println(systemSection)
-			// fmt.Println(diskSection)
-			// fmt.Println(cpuSection)
-
 			timeStamp := time.Now().Format("2006-01-02 15:04:05")
 
 			html := `
-					<div hx-swap-oob="innerHMTL:#update-timestamp">` + timeStamp + `</div>
+					<div hx-swap-oob="innerHMTL:#update-timestamp">` + timeStamp + ` <i class="fa-solid fa-link"></i></div>
 					<div hx-swap-oob="innerHMTL:#system-data">` + systemSection + `</div>
 					<div hx-swap-oob="innerHMTL:#disk-data">` + diskSection + `</div>
 					<div hx-swap-oob="innerHMTL:#cpu-data">` + cpuSection + `</div>
 				`
 
 			s.broadcast([]byte(html))
-
-			fmt.Println(s.subscribers)
 
 			time.Sleep(3 * time.Second)
 		}

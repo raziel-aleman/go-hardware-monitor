@@ -26,20 +26,19 @@
         <div class="col-md-12">
           <h1>Raz's Hardware Monitor <i class="fa-brands fa-golang" style="float: right; padding-top: 0.8rem;" ></i></h1>
           <div hx-ext="ws" ws-connect="ws://localhost:8080/ws">
-            <div id="update-timestamp">Waiting for data..</div>
+            <div id="update-timestamp">Waiting for data... <i class="fa-solid fa-link-slash"></i></div>
             <hr />
             <div id="monitor-data" style="white-space:pre-line;">
               <div class="row monitor-row">
                 <div class="col-md-6">
                   <h5><i class="fa-solid fa-desktop" style="margin-right: 0.5rem"></i> System</h5>
-                  <div id="system-data"></div>
-                  <br>
+                  <div id="system-data" style="margin-top: -1.5rem"></div>
                   <h5><i class="fa-solid fa-server" style="margin-right: 0.5rem"></i> Disk</h5>
-                  <div id="disk-data"></div>
+                  <div id="disk-data" style="margin-top: -1.5rem"></div>
                 </div>
                 <div class="col-md-6">
                   <h5><i class="fa-solid fa-microchip" style="margin-right: 0.5rem"></i> CPU</h5>
-                  <div id="cpu-data"></div>
+                  <div id="cpu-data" style="margin-top: -1.5rem"></div>
                 </div>
               </div>
             </div>
@@ -48,7 +47,7 @@
       </div>
       <hr />
       <div class="footer" style="font-size: 0.9rem; color: #6c757d;">
-        Built with &lt;3 by <a href="github.com/raziel-aleman">Raz</a>, as a pet project to use <a href="https://htmx.org">htmx</a> and <a href="https://go.dev">Go</a>.
+        Built by <a href="github.com/raziel-aleman">Raz</a>, as a pet project to use <a href="https://htmx.org">htmx</a> and <a href="https://go.dev">Go</a>.
       </div>
 
     <script
