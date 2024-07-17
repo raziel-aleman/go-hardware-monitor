@@ -52,7 +52,7 @@ func GetCpuSection() (string, error) {
 	}
 
 	if matched {
-		output = fmt.Sprintf("CPU: %s\nCores: %d", cpuStat[0].ModelName, cpuStat[0].Cores)
+		output = fmt.Sprintf("Model Name: %s\nCores: %d", cpuStat[0].ModelName, cpuStat[0].Cores)
 	} else {
 		output = fmt.Sprintf("Model Name: %s\nFamily: %s\nSpeed: %.2f Mhz\nCores: %d", cpuStat[0].ModelName, cpuStat[0].Family, cpuStat[0].Mhz, len(cpuStat))
 	}
